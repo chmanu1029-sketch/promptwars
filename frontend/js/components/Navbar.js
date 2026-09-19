@@ -51,6 +51,10 @@ function renderNavbar(activeTab, onTabSelect, currentRole, onRoleSelect) {
   if (topBar) {
     topBar.innerHTML = `
       <div class="top-bar-left">
+        <div class="topbar-logo">
+          <img src="assets/logo.jpg" alt="SOLYA" onerror="this.style.display='none'" />
+          <span class="topbar-logo-name">SOLYA</span>
+        </div>
         <div class="role-badge">
           <span>${currentRole === 'senior' ? '👴 Senior User' : (currentRole === 'family' ? '👨‍👩‍👧 Caregiver' : '👩‍⚕️ Doctor')}</span>
         </div>
@@ -117,7 +121,9 @@ function renderNavbar(activeTab, onTabSelect, currentRole, onRoleSelect) {
   if (sideNav) {
     sideNav.innerHTML = `
       <div class="brand-header">
-        <div class="brand-icon">S</div>
+        <div class="brand-icon">
+          <img src="assets/logo.jpg" alt="SOLYA Logo" onerror="this.parentElement.innerHTML='S'" />
+        </div>
         <div class="brand-titles">
           <h1>${t('appName')}</h1>
           <p class="brand-tagline">${t('tagline')}</p>
